@@ -8,6 +8,7 @@ export const Container = styled.div`
   gap:12px;
 
   padding-inline: 16px;
+  margin-bottom: 8px;
 
   border-radius: 10px;
   background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
