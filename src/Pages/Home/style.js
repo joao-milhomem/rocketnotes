@@ -12,7 +12,7 @@ export const Container = styled.div`
   "menu content"
   "newNote content";
   grid-template-columns: 250px auto;
-  grid-template-rows: 105px 80px auto 65px;
+  grid-template-rows: 105px 100px auto 64px;
 
 `
 
@@ -23,21 +23,37 @@ export const Brand = styled.div`
   justify-content:center;
   align-items: center;
 
+  color: ${({theme}) => theme.COLORS.ORANGE};
   background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
   border-bottom:1px solid ${({theme}) => theme.COLORS.BACKGROUND_800};
-  color: ${({theme}) => theme.COLORS.ORANGE};
+
+  >h1{
+    font-size: 24px;
+  }
 `
+
 export const Menu =styled.nav`
+
   grid-area: menu;  
   background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
   
   ul{
     display: grid;
-    gap: 20px;
+    gap: 24px;
     text-align: center;
 
-    margin-top: 32px;
+    padding-top: 64px;
   }
+`
+export const Search = styled.div`
+  grid-area: search;
+  padding: 32px 64px ;
+  margin-bottom: 8px;
+`
+export const Content = styled.main`
+  grid-area: content;
+  padding: 0 64px ;
+  overflow-y: auto;
 `
 export const NewNote = styled.button`
   grid-area: newNote;
@@ -57,3 +73,4 @@ export const NewNote = styled.button`
     font-size: 20px;
   }
 `
+
