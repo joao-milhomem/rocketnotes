@@ -20,7 +20,7 @@ export const Container = styled.div`
 
   >input{
     width: 100%;
-    height: 56px;
+    height:56px;
 
     background: none;
     border: none;
