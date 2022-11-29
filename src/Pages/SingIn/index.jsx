@@ -1,4 +1,6 @@
 import { Background, Container, Form } from "./styles";
+import { Link } from "react-router-dom";
+
 import {Input} from '../../components/Input'
 import {Button} from '../../components/Button'
 import {ButtonText} from '../../components/ButtonText'
@@ -16,7 +18,10 @@ export function SingIn() {
         <Input placeholder = 'Senha' icon={FiLock} />
         <Button title='Entrar'/>       
         
-        <ButtonText title='Criar conta'/>  
+        <Link to='/singup'>
+          Criar conta
+        </Link >
+
       </Form>
       <Background />
     </Container>

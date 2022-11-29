@@ -35,6 +35,13 @@ export const Form = styled.form`
     margin-top: 84px;
     color:${({theme}) => theme.COLORS.ORANGE};   
   }
+
+ a{
+  align-self: center;
+  margin-top: 80px;
+  text-decoration: none;
+  color: ${({theme}) => theme.COLORS.ORANGE};
+ }
 `
 
 export const Background = styled.div`

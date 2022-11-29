@@ -2,41 +2,41 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: grid;
   grid-template-rows: 105px auto;
   grid-template-areas: 
-  "header" 
+  "header"
   "content";
 
+
+  >main{
+    grid-area: content;
+    overflow-y: auto;
+
+    .tags{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    }
+  }
 `
 export const Form = styled.form`
   max-width: 550px;
   margin: 0 auto;
+  padding-bottom: 24px;
+  grid-area: content;
 
   >header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-block: 32px;
+
+    a{
+      color:${({theme}) => theme.COLORS.GRAY_100};
+    }
   }
 
-  >textarea{
-    width: 100%;
-    resize: none;
-    height:156px;
-    
-    padding: 16px;
-    margin-bottom: 8px;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
-    color: ${({theme}) => theme.COLORS.GRAY_100};
-
-    ::placeholder{
-      color: ${({theme}) => theme.COLORS.GRAY_300};
-  }
-}
 `
